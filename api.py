@@ -10,7 +10,7 @@ app = FastAPI()
 telegram_app = Application.builder().token(BOT_TOKEN).build()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    keyboard = [[InlineKeyboardButton("Запустить квиз", url="https://t.me/kvizapp_bot/kvizapp")]]
+    keyboard = [[InlineKeyboardButton("Запустить квиз", url="https://kvizapp.vercel.app/")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text("Нажми кнопку, чтобы запустить квиз:", reply_markup=reply_markup)
 
